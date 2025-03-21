@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../http/">
+        <link rel="prev" href="../PayloadEncyption/">
       
       
-        <link rel="next" href="../Timezone/">
+        <link rel="next" href="../CSRF_XSS/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Users - Digid Infrastructure</title>
+        <title>Password Encryption - Digid Infrastructure</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#application-layer" class="md-skip">
+        <a href="#security-layer" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Users
+              Password Encryption
             
           </span>
         </div>
@@ -296,10 +296,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../PasswordEncryption/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Password Encryption
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -309,6 +330,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#passworld-encryption" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passworld Encryption
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -800,31 +850,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Users
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../Users/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,44 +863,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#default-user-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Default User model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-user-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom User Model
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1029,18 +1020,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#default-user-model" class="md-nav__link">
+  <a href="#passworld-encryption" class="md-nav__link">
     <span class="md-ellipsis">
-      Default User model
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#custom-user-model" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom User Model
+      Passworld Encryption
     </span>
   </a>
   
@@ -1062,27 +1044,31 @@
 
 
 
-<h1 id="application-layer">Application Layer</h1>
-<h2 id="default-user-model">Default User model</h2>
-<p>
-In Django, the User model is part of the built-in authentication system and is used to manage user accounts. It provides fields such as username, password, email, and methods for handling user authentication. The User model is located in the django.contrib.auth.models module.
+<h1 id="security-layer">Security Layer</h1>
+<h2 id="passworld-encryption">Passworld Encryption</h2>
+<p>Django, the default password hashing algorithm is pbkdf2_sha256. When you create a user or change a password, Django automatically uses this algorithm to hash the password securely. You don't need to specify the algorithm explicitly as it is the default</p>
+<p>Algorithm :  pbkdf2_sha256</p>
+<p>to get the hash algorithm type</p>
+<pre><code>from django.contrib.auth.hashers import make_password, check_password, identify_hasher
 
-Here's a basic overview of the Django User model:
 
-</p>
+hashed_password = &quot;pbkdf2_sha256$100000$kyOHnnbwxxkV$uK9PhD0rsU1vB+O1rkgZVnhTdIOen3jeY4mSplS0cJg=&quot;
+hasher = identify_hasher(hashed_password)
+print(hasher.algorithm) # output  : pbkdf2_sha256
 
-<pre><code>python manage.py createsuperuser
 </code></pre>
-<h2 id="custom-user-model">Custom User Model</h2>
-<p>Django also allows you to create a custom user model by extending the AbstractUser class. This gives you the flexibility to add custom fields to the user model.</p>
-<p>Here's an example of creating a custom user model:</p>
-<pre><code>from django.contrib.auth.models import AbstractUser
+<p>In the one-liner for creating a new password:</p>
+<pre><code>python3 manage.py shell --command &quot;from django.contrib.auth.hashers import make_password, check_password; print(make_password('Welcome1@', hasher='pbkdf2_sha256'))&quot;
+</code></pre>
+<p>This will output the hashed password using the pbkdf2_sha256 algorithm. Remember that you should store this hashed password in your database for user authentication. When checking a password during login, you can use the check_password function:</p>
+<pre><code># Example of checking a password during login
+stored_password_hash = &quot;pbkdf2_sha256$100000$kyOHnnbwxxkV$uK9PhD0rsU1vB+O1rkgZVnhTdIOen3jeY4mSplS0cJg=&quot;
+entered_password = 'Welcome1@'
 
-class CustomUser(AbstractUser):
-    # Add custom fields here
-
-# Update the AUTH_USER_MODEL setting in settings.py
-AUTH_USER_MODEL = 'your_app.CustomUser'
+if check_password(entered_password, stored_password_hash):
+    print(&quot;Password is correct!&quot;)
+else:
+    print(&quot;Password is incorrect.&quot;)
 </code></pre>
 
 

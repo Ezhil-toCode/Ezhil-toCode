@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../SSO/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../Email/">
+        <link rel="next" href="../URLEncyption/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SMS - Digid Infrastructure</title>
+        <title>Dynamic API Function Resolution - Digid Infrastructure</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integration-layer" class="md-skip">
+        <a href="#dynamic-api-function-resolution-based-on-folder-structure" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SMS
+              Dynamic API Function Resolution
             
           </span>
         </div>
@@ -233,10 +233,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../DynamicAPIFunction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dynamic API Function Resolution
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -246,6 +267,86 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folder-resolution-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder Resolution Logic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder Structure Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-code-for-dynamic-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example :: Python Code for Dynamic Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -485,31 +586,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    SMS
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../SMS/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -519,35 +599,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#email-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      Email Template
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1041,9 +1092,60 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#email-template" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Email Template
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#folder-resolution-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder Resolution Logic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#folder-structure-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folder Structure Example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-python-code-for-dynamic-execution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example :: Python Code for Dynamic Execution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Behavior
     </span>
   </a>
   
@@ -1065,36 +1167,62 @@
 
 
 
-<h1 id="integration-layer">Integration Layer</h1>
-<h2 id="email-template">Email Template</h2>
-<p>
-1. Create an Email Template:
-
-First, create an HTML file for your email template. You can store your email templates in the templates directory of your Django app. For example, create a file like email_template.html.
-</p>
-
-<pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;body&gt;
-    &lt;p&gt;Hello {{ recipient_name }},&lt;/p&gt;
-    &lt;p&gt;This is the content of your email.&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-&lt;/code&gt;
+<h1 id="dynamic-api-function-resolution-based-on-folder-structure">Dynamic API Function Resolution Based on Folder Structure</h1>
+<h2 id="overview">Overview</h2>
+<p>This document describes an approach for dynamically resolving and executing API functions based on a structured folder hierarchy. The API will attempt to locate and run the wpr_sms_txt function from different folder locations, following a priority order.</p>
+<h2 id="folder-resolution-logic">Folder Resolution Logic</h2>
+<p>The API will look for the wpr_sms_txt function in the following order:</p>
+<pre><code>V1/UG/mybank/integAPI.py → wpr_sms_txt
+V1/UG/integAPI.py → wpr_sms_txt
+V1/integAPI.py → wpr_sms_txt
+V1/DEFAULT/integAPI.py → wpr_sms_txt
 </code></pre>
-<p>
-2. Load and Render the Template in Your Django View:
-
-In your Django view, load and render the email template using the render_to_string function.
-
-</p>
-
-<pre><code>from django.template.loader import render_to_string
-
-def send_email(request):
-    recipient_name = &quot;John Doe&quot;
-    email_content = render_to_string('your_app/email_template.html', {'recipient_name': recipient_name})
+<p>If the function is found in any of the above locations, the API will execute it and return the response.</p>
+<h2 id="implementation-approach">Implementation Approach</h2>
+<h3 id="folder-structure-example">Folder Structure Example</h3>
+<pre><code>project_root/
+│── V1/
+│   │── UG/
+│   │   │── mybank/
+│   │   │   │── integAPI.py
+│   │   │── integAPI.py
+│   │── integAPI.py
+│   │── DEFAULT/
+│       │── integAPI.py
 </code></pre>
+<h3 id="example-python-code-for-dynamic-execution">Example :: Python Code for Dynamic Execution</h3>
+<pre><code>import importlib.util
+import os
+
+def find_and_execute(module_paths, function_name, data):
+    for module_path in module_paths:
+        if os.path.exists(module_path):
+            spec = importlib.util.spec_from_file_location("integAPI", module_path)
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+
+            if hasattr(module, function_name):
+                func = getattr(module, function_name)
+                return func(data)
+    return {"error": "Function not found in any valid module"}
+
+# Define the function search order
+module_search_order = [
+    "V1/UG/mybank/integAPI.py",
+    "V1/UG/integAPI.py",
+    "V1/integAPI.py",
+    "V1/DEFAULT/integAPI.py"
+]
+
+# Example usage
+data = {"message": "Hello", "phone_number": "+1234567890"}
+result = find_and_execute(module_search_order, "wpr_sms_txt", data)
+</code></pre>
+<h2 id="behavior">Behavior</h2>
+<p>The script will search for wpr_sms_txt in the predefined paths.
+Once found, it will execute the function with the provided data.
+If the function is not found in any path, an error message is returned.
+ConclusionThis approach ensures a structured way to locate and execute API functions dynamically based on the folder hierarchy, providing flexibility in module organization and execution priority.</p>
 
 
 

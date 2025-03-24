@@ -20,7 +20,7 @@
     
     
       
-        <title>Pytest - Intergration Framwork</title>
+        <title>Testing framework - Intergration Framwork</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installation" class="md-skip">
+        <a href="#testing-framework" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Pytest
+              Testing framework
             
           </span>
         </div>
@@ -236,11 +236,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../folder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Folder
+    Folder Structure
     
   </span>
   
@@ -261,7 +282,7 @@
         
   
   <span class="md-ellipsis">
-    Pyenv
+    Python Version Management
     
   </span>
   
@@ -282,7 +303,7 @@
         
   
   <span class="md-ellipsis">
-    UV
+    Dependency Management
     
   </span>
   
@@ -303,7 +324,7 @@
         
   
   <span class="md-ellipsis">
-    Ruff
+    Python Linter
     
   </span>
   
@@ -324,7 +345,7 @@
         
   
   <span class="md-ellipsis">
-    Just
+    Command Runner
     
   </span>
   
@@ -347,12 +368,14 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    Pytest
+    Testing framework
     
   </span>
   
@@ -364,7 +387,7 @@
         
   
   <span class="md-ellipsis">
-    Pytest
+    Testing framework
     
   </span>
   
@@ -377,6 +400,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -388,6 +413,15 @@
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version
     </span>
   </a>
   
@@ -598,6 +632,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -609,6 +645,15 @@
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#version" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version
     </span>
   </a>
   
@@ -726,10 +771,16 @@
 
 
 
-  <h1>Pytest</h1>
-
+<h1 id="testing-framework">Testing framework</h1>
+<ol>
+<li>Official Documentation: <a href="https://docs.pytest.org/en/stable/">https://docs.pytest.org/en/stable/</a></li>
+</ol>
+<p>Pytest is a Python testing framework that originated from the PyPy project. It can be used to write various types of software tests, including unit tests, integration tests, end-to-end tests, and functional tests. Its features include parametrized testing, fixtures, and assert re-writing.</p>
 <h2 id="installation">Installation</h2>
 <pre><code>uv add pytest --dev
+</code></pre>
+<h2 id="version">Version</h2>
+<pre><code>uv run pytest --version
 </code></pre>
 <h2 id="commands">Commands</h2>
 <pre><code>just run test &lt;folder/filepath.py&gt;

@@ -236,11 +236,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../folder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Folder
+    Folder Structure
     
   </span>
   
@@ -261,7 +282,7 @@
         
   
   <span class="md-ellipsis">
-    Pyenv
+    Python Version Management
     
   </span>
   
@@ -282,7 +303,7 @@
         
   
   <span class="md-ellipsis">
-    UV
+    Dependency Management
     
   </span>
   
@@ -303,7 +324,7 @@
         
   
   <span class="md-ellipsis">
-    Ruff
+    Python Linter
     
   </span>
   
@@ -324,7 +345,7 @@
         
   
   <span class="md-ellipsis">
-    Just
+    Command Runner
     
   </span>
   
@@ -345,7 +366,7 @@
         
   
   <span class="md-ellipsis">
-    Pytest
+    Testing framework
     
   </span>
   
@@ -452,11 +473,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#configtoml" class="md-nav__link">
     <span class="md-ellipsis">
       Config.toml
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dummy-test-inputdatatoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy test (Inputdata.toml)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dummy test (Inputdata.toml)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -516,11 +594,68 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Configuration
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuration">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#configtoml" class="md-nav__link">
     <span class="md-ellipsis">
       Config.toml
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#input-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dummy-test-inputdatatoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy test (Inputdata.toml)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dummy test (Inputdata.toml)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -542,13 +677,39 @@
 
 <h1 id="sms">SMS</h1>
 <p>Official Documentation: <a href="https://www.python-httpx.org/">https://www.python-httpx.org/</a></p>
-<h2 id="configtoml">Config.toml</h2>
+<h2 id="configuration">Configuration</h2>
+<p><code>config.toml</code></p>
+<p>The config.toml file contains the necessary configuration for the SMS API. Update the following fields based on your requirements:</p>
+<h3 id="configtoml">Config.toml</h3>
 <pre><code>[sms]
 url = "http://acbc.ai/api/processrequestV2"
 username =  "abc"
 password = "GtWD7dP99R7Htv5wE6P2RqeWsdfsdf"
 api_key =   "abc"
 security_key = "abc"
+</code></pre>
+<h2 id="input-types">Input Types</h2>
+<pre><code>class SMSEntityInput(BaseModel):
+    phone_number: str
+</code></pre>
+<p>Modify the SMSEntityInput class in caml_types/input_entity_types.py based on the requirement change.</p>
+<h2 id="dummy-test-inputdatatoml">Dummy test (Inputdata.toml)</h2>
+<pre><code>[sms]
+phone_number = "8489520000"
+</code></pre>
+<h4 id="dummy-data">Dummy data</h4>
+<pre><code>just run api sms #it will take the default values from the just
+just run api sms config.toml 0 dummy inputdata.toml
+
+
+# with paramater
+just run api config_channel_type="sms" config_file_path="config.toml" config_entry_name="0" config_source_data="dummy"
+</code></pre>
+<h4 id="database-data">Database  data</h4>
+<pre><code>just run api sms config.toml 0 database 12314
+
+# with paramater
+just run api config_channel_type="sms" application_id=12314 config_file_path="config.toml"  config_source_data="database"  config_source_file="inputdata.toml"
 </code></pre>
 
 

@@ -236,11 +236,32 @@
   
   
     <li class="md-nav__item">
+      <a href="../project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../folder/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Folder
+    Folder Structure
     
   </span>
   
@@ -261,7 +282,7 @@
         
   
   <span class="md-ellipsis">
-    Pyenv
+    Python Version Management
     
   </span>
   
@@ -282,7 +303,7 @@
         
   
   <span class="md-ellipsis">
-    UV
+    Dependency Management
     
   </span>
   
@@ -303,7 +324,7 @@
         
   
   <span class="md-ellipsis">
-    Ruff
+    Python Linter
     
   </span>
   
@@ -324,7 +345,7 @@
         
   
   <span class="md-ellipsis">
-    Just
+    Command Runner
     
   </span>
   
@@ -345,7 +366,7 @@
         
   
   <span class="md-ellipsis">
-    Pytest
+    Testing framework
     
   </span>
   
@@ -466,6 +487,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#input-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dummy-test-inputdatatoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy test (Inputdata.toml)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dummy test (Inputdata.toml)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -578,6 +641,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#input-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Input Types
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dummy-test-inputdatatoml" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy test (Inputdata.toml)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dummy test (Inputdata.toml)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dummy-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dummy data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -598,8 +703,7 @@
 <p>Official Documentation: <a href="https://docs.python.org/3/library/smtplib.html">https://docs.python.org/3/library/smtplib.html</a></p>
 <p>The smtplib module defines an SMTP client session object that can be used to send mail to any internet machine with an SMTP or ESMTP listener daemon. For details of SMTP and ESMTP operation, consult RFC 821 (Simple Mail Transfer Protocol) and RFC 1869 (SMTP Service Extensions).</p>
 <h2 id="installation">Installation</h2>
-<pre><code>The reason for this is that smtplib is inbuilt to Python. Therefore, it is installed initially with the Python installation.
-</code></pre>
+<p>The reason for this is that smtplib is inbuilt to Python. Therefore, it is installed initially with the Python installation.</p>
 <h2 id="configtoml">Config.toml</h2>
 <pre><code>[email]
 from_email = "abcd@digid.ai"
@@ -617,6 +721,29 @@ input_data :: to_email='ezhil@tocode.ai'
 server :  &lt;smtplib.SMTP object at 0x105227ce0&gt;
 Email sent successfully!
 result :  True
+</code></pre>
+<h2 id="input-types">Input Types</h2>
+<pre><code>class EmailEntityInput(BaseModel):
+    to_email: str
+</code></pre>
+<p>Modify the EmailEntityInput class in caml_types/input_entity_types.py based on the requirement change.</p>
+<h2 id="dummy-test-inputdatatoml">Dummy test (Inputdata.toml)</h2>
+<pre><code>[email]
+to_email = "ezhil@tocode.ai"
+</code></pre>
+<h4 id="dummy-data">Dummy data</h4>
+<pre><code>just run api email #it will take the default values from the just
+just run api email config.toml 0 dummy inputdata.toml
+
+
+# with paramater
+just run api config_channel_type="email" config_file_path="config.toml" config_entry_name="0" config_source_data="dummy"
+</code></pre>
+<h4 id="database-data">Database  data</h4>
+<pre><code>just run api email database 12314 0 config.toml inputdata.toml
+
+# with paramater
+just run api config_channel_type="email" config_source_data="database" application_id="12314" config_entry_name="0"  --config_file_path="config.toml" --config_source_file="/Applications/toCode/Integration-Framework/inputdata.toml"
 </code></pre>
 
 

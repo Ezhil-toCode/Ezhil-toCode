@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../pyenv/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../ruff/">
+        <link rel="next" href="../folder/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Dependency Management - Intergration Framwork</title>
+        <title>Project Infrastructure - Intergration Framwork</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dependency-management-uv" class="md-skip">
+        <a href="#project-dependencies" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dependency Management
+              Project Infrastructure
             
           </span>
         </div>
@@ -233,10 +233,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../project/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Project Infrastructure
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -246,6 +267,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Libraries
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commands-installation-uv-library" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commands : Installation UV Library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry-installation-commands-if-not-using-uv-packages-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poetry Installation Commands (if not using UV packages) [Optional]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-installation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Installation Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip-installation-commands-if-not-using-uv-packages-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIP Installation Commands (if not using UV packages) [Optional]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Tree
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -296,31 +400,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Dependency Management
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../uv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -330,53 +413,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installation-commands-uv-library" class="md-nav__link">
-    <span class="md-ellipsis">
-      Installation Commands : UV Library
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#frequently-using-cli-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      Frequently Using Cli Commands
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#uv-commands" class="md-nav__link">
-    <span class="md-ellipsis">
-      UV commands
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -555,27 +591,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installation-commands-uv-library" class="md-nav__link">
+  <a href="#libraries" class="md-nav__link">
     <span class="md-ellipsis">
-      Installation Commands : UV Library
+      Libraries
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#frequently-using-cli-commands" class="md-nav__link">
+  <a href="#installation-commands" class="md-nav__link">
     <span class="md-ellipsis">
-      Frequently Using Cli Commands
+      Installation Commands
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#uv-commands" class="md-nav__link">
+  <a href="#commands-installation-uv-library" class="md-nav__link">
     <span class="md-ellipsis">
-      UV commands
+      Commands : Installation UV Library
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poetry-installation-commands-if-not-using-uv-packages-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poetry Installation Commands (if not using UV packages) [Optional]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-installation-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Installation Commands
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pip-installation-commands-if-not-using-uv-packages-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      PIP Installation Commands (if not using UV packages) [Optional]
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uv-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      UV Tree
     </span>
   </a>
   
@@ -597,105 +669,217 @@
 
 
 
-<h1 id="dependency-management-uv">Dependency Management (UV)</h1>
-<p>Offical Documentation : <a href="https://docs.astral.sh/uv/">https://docs.astral.sh/uv/</a></p>
-<p>Python packaging and dependency management</p>
-<h2 id="installation-commands-uv-library">Installation Commands : UV Library</h2>
+<h1 id="project-dependencies">Project Dependencies</h1>
+<h2 id="libraries">Libraries</h2>
+<p>This project uses the following tools and libraries:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Tool</strong></th>
+<th><strong>Description</strong></th>
+<th><strong>Documentation</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Python Version Management</strong></td>
+<td><code>pyenv</code></td>
+<td>Manage and switch between multiple Python versions.</td>
+<td><a href="https://github.com/pyenv/pyenv">pyenv GitHub</a></td>
+</tr>
+<tr>
+<td><strong>Python Packaging</strong></td>
+<td><code>uv</code></td>
+<td>Fast Python package installer and dependency resolver.</td>
+<td><a href="https://docs.astral.sh/uv/">uv Docs</a></td>
+</tr>
+<tr>
+<td><strong>[Optional]</strong></td>
+<td><code>poetry</code></td>
+<td>Dependency management and packaging tool for Python projects.</td>
+<td><a href="https://python-poetry.org/docs/">Poetry Docs</a></td>
+</tr>
+<tr>
+<td><strong>Project Documentation</strong></td>
+<td><code>mkDocs</code></td>
+<td>Static site generator for project documentation using Markdown.</td>
+<td><a href="https://www.mkdocs.org/">MkDocs</a></td>
+</tr>
+<tr>
+<td><strong>Project-Specific Commands</strong></td>
+<td><code>just</code></td>
+<td>Command runner for defining and executing project-specific tasks.</td>
+<td><a href="https://just.systems/man/en/">Just Docs</a></td>
+</tr>
+<tr>
+<td><strong>Python Linter &amp; Formatter</strong></td>
+<td><code>ruff</code></td>
+<td>Extremely fast Python linter and code formatter.</td>
+<td><a href="https://docs.astral.sh/ruff/">Ruff Docs</a></td>
+</tr>
+<tr>
+<td><strong>Python Testing Framework</strong></td>
+<td><code>pytest</code></td>
+<td>Powerful and flexible testing framework for Python.</td>
+<td><a href="https://docs.pytest.org/en/stable/">pytest Docs</a></td>
+</tr>
+<tr>
+<td><strong>Python Data Validation</strong></td>
+<td><code>Pydantic</code></td>
+<td>Data validation and settings management using Python type annotations.</td>
+<td><a href="https://docs.pydantic.dev/latest/">Pydantic Docs</a></td>
+</tr>
+<tr>
+<td><strong>Python SOAP Client</strong></td>
+<td><code>Zeep</code></td>
+<td>Modern SOAP client for interacting with SOAP-based web services.</td>
+<td><a href="https://docs.python-zeep.org/en/master/">Zeep Docs</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="installation-commands">Installation Commands</h2>
+<pre><code>#!/bin/bash
+
+# Install pyenv (Python Version Management)
+echo "Installing pyenv..."
+curl https://pyenv.run | bash
+echo 'export PYENV_ROOT="$HOME/.pyenv"' &gt;&gt; ~/.bashrc
+echo 'command -v pyenv &gt;/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' &gt;&gt; ~/.bashrc
+echo 'eval "$(pyenv init -)"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
+
+# Install Python (latest stable version) using pyenv
+echo "Installing Python via pyenv..."
+pyenv install 3.11.5  # Replace with the desired version
+pyenv global 3.11.5
+
+# Install Just (Project-specific commands)
+echo "Installing Just..."
+curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
+</code></pre>
+<h2 id="commands-installation-uv-library">Commands : Installation UV Library</h2>
 <pre><code># Install uv (Python package installer)
 echo "Installing uv..."
 curl -LsSf https://astral.sh/uv/install.sh | sh
 echo 'export PATH="$HOME/.cargo/bin:$PATH"' &gt;&gt; ~/.bashrc
 source ~/.bashrc
 </code></pre>
-<h2 id="frequently-using-cli-commands">Frequently Using  Cli Commands</h2>
-<pre><code># add library
-uv add &lt;package_name&gt;
-# eg :: uv add pandas
-
-# remove library
-uv remove &lt;package_name&gt;
-
-# Synchronize dependencies.
-uv sync
-
-# Set the Python version for the current project.
-uv run python3 &lt;file_name.py&gt;
-uv run
-    - mkdocs
-    - pytest
-    - python
-    - python3
-    - python3.12
-    - ruff
-
-# running tools without installation
-uvx &lt;command&gt;
+<h2 id="poetry-installation-commands-if-not-using-uv-packages-optional">Poetry Installation Commands (if not using UV packages) [Optional]</h2>
+<pre><code># Install Poetry (Python dependency management)
+echo "Installing Poetry..."
+curl -sSL https://install.python-poetry.org | python3 -
+echo 'export PATH="$HOME/.local/bin:$PATH"' &gt;&gt; ~/.bashrc
+source ~/.bashrc
 </code></pre>
-<h2 id="uv-commands">UV commands</h2>
-<pre><code>An extremely fast Python package manager.
+<h2 id="uv-installation-commands">UV Installation Commands</h2>
+<pre><code># Install MkDocs (Project documentation)
+echo "Installing MkDocs..."
+uv add mkdocs
 
-Usage: uv [OPTIONS] &lt;COMMAND&gt;
+# Install Ruff (Python linter and formatter)
+echo "Installing Ruff..."
+uv add ruff
 
-Commands:
-run      Run a command or script
-init     Create a new project
-add      Add dependencies to the project
-remove   Remove dependencies from the project
-sync     Update the project's environment
-lock     Update the project's lockfile
-export   Export the project's lockfile to an alternate format
-tree     Display the project's dependency tree
-tool     Run and install commands provided by Python packages
-python   Manage Python versions and installations
-pip      Manage Python packages with a pip-compatible interface
-venv     Create a virtual environment
-build    Build Python packages into source distributions and wheels
-publish  Upload distributions to an index
-cache    Manage uv's cache
-self     Manage the uv executable
-version  Display uv's version
-help     Display documentation for a command
+# Install pytest (Python testing framework)
+echo "Installing pytest..."
+uv add pytest
 
-Cache options:
--n, --no-cache               Avoid reading from or writing to the cache, instead using a temporary directory for the
-                            duration of the operation [env: UV_NO_CACHE=]
-    --cache-dir &lt;CACHE_DIR&gt;  Path to the cache directory [env: UV_CACHE_DIR=]
+# Install Pydantic (Python data validation library)
+echo "Installing Pydantic..."
+uv add pydantic
 
-Python options:
-    --python-preference &lt;PYTHON_PREFERENCE&gt;  Whether to prefer uv-managed or system Python installations [env:
-                                            UV_PYTHON_PREFERENCE=] [possible values: only-managed, managed, system,
-                                            only-system]
-    --no-python-downloads                    Disable automatic downloads of Python. [env: "UV_PYTHON_DOWNLOADS=never"]
+# Install Zeep (Python SOAP client)
+echo "Installing Zeep..."
+uv add zeep
 
-Global options:
--q, --quiet
-        Do not print any output
--v, --verbose...
-        Use verbose output
-    --color &lt;COLOR_CHOICE&gt;
-        Control colors in output [default: auto] [possible values: auto, always, never]
-    --native-tls
-        Whether to load TLS certificates from the platform's native certificate store [env: UV_NATIVE_TLS=]
-    --offline
-        Disable network access
-    --allow-insecure-host &lt;ALLOW_INSECURE_HOST&gt;
-        Allow insecure connections to a host [env: UV_INSECURE_HOST=]
-    --no-progress
-        Hide all progress outputs [env: UV_NO_PROGRESS=]
-    --directory &lt;DIRECTORY&gt;
-        Change to the given directory prior to running the command
-    --project &lt;PROJECT&gt;
-        Run the command within the given project directory
-    --config-file &lt;CONFIG_FILE&gt;
-        The path to a `uv.toml` file to use for configuration [env: UV_CONFIG_FILE=]
-    --no-config
-        Avoid discovering configuration files (`pyproject.toml`, `uv.toml`) [env: UV_NO_CONFIG=]
--h, --help
-        Display the concise help for this command
--V, --version
-        Display the uv version
+echo "All dependencies installed successfully!"
+</code></pre>
+<h2 id="pip-installation-commands-if-not-using-uv-packages-optional">PIP Installation Commands (if not using UV packages) [Optional]</h2>
+<pre><code># Install MkDocs (Project documentation)
+echo "Installing MkDocs..."
+pip install mkdocs
 
-Use `uv help` for more details.
+# Install Ruff (Python linter and formatter)
+echo "Installing Ruff..."
+pip install ruff
+
+# Install pytest (Python testing framework)
+echo "Installing pytest..."
+pip install pytest
+
+# Install Pydantic (Python data validation library)
+echo "Installing Pydantic..."
+pip install pydantic
+
+# Install Zeep (Python SOAP client)
+echo "Installing Zeep..."
+pip install zeep
+
+echo "All dependencies installed successfully!"
+</code></pre>
+<h2 id="uv-tree">UV Tree</h2>
+<pre><code>integration-framework v0.1.0
+├── httpx v0.28.1
+│   ├── anyio v4.9.0
+│   │   ├── idna v3.10
+│   │   ├── sniffio v1.3.1
+│   │   └── typing-extensions v4.12.2
+│   ├── certifi v2025.1.31
+│   ├── httpcore v1.0.7
+│   │   ├── certifi v2025.1.31
+│   │   └── h11 v0.14.0
+│   └── idna v3.10
+├── ldap3 v2.9.1
+│   └── pyasn1 v0.6.1
+├── pydantic v2.10.6
+│   ├── annotated-types v0.7.0
+│   ├── pydantic-core v2.27.2
+│   │   └── typing-extensions v4.12.2
+│   └── typing-extensions v4.12.2
+├── pytest v8.3.5
+│   ├── iniconfig v2.0.0
+│   ├── packaging v24.2
+│   └── pluggy v1.5.0
+├── pyyaml v6.0.2
+├── xmltodict v0.14.2
+├── zeep v4.3.1
+│   ├── attrs v25.3.0
+│   ├── isodate v0.7.2
+│   ├── lxml v5.3.1
+│   ├── platformdirs v4.3.6
+│   ├── pytz v2025.1
+│   ├── requests v2.32.3
+│   │   ├── certifi v2025.1.31
+│   │   ├── charset-normalizer v3.4.1
+│   │   ├── idna v3.10
+│   │   └── urllib3 v2.3.0
+│   ├── requests-file v2.1.0
+│   │   └── requests v2.32.3 (*)
+│   └── requests-toolbelt v1.0.0
+│       └── requests v2.32.3 (*)
+├── mkdocs v1.6.1 (group: dev)
+│   ├── click v8.1.8
+│   ├── ghp-import v2.1.0
+│   │   └── python-dateutil v2.9.0.post0
+│   │       └── six v1.17.0
+│   ├── jinja2 v3.1.6
+│   │   └── markupsafe v3.0.2
+│   ├── markdown v3.7
+│   ├── markupsafe v3.0.2
+│   ├── mergedeep v1.3.4
+│   ├── mkdocs-get-deps v0.2.0
+│   │   ├── mergedeep v1.3.4
+│   │   ├── platformdirs v4.3.6
+│   │   └── pyyaml v6.0.2
+│   ├── packaging v24.2
+│   ├── pathspec v0.12.1
+│   ├── pyyaml v6.0.2
+│   ├── pyyaml-env-tag v0.1
+│   │   └── pyyaml v6.0.2
+│   └── watchdog v6.0.0
+└── ruff v0.11.0 (group: dev)
+(*) Package tree already displayed
 </code></pre>
 
 

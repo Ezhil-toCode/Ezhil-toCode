@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../ConfigurationManagement/">
+        <link rel="prev" href="../SSL/">
       
       
-        <link rel="next" href="../ORM/">
+        <link rel="next" href="../PayloadEncyption/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Common Functionality - Digid Infrastructure</title>
+        <title>Password Manager - Digid Infrastructure</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#infrastructure" class="md-skip">
+        <a href="#password-manager" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Common Functionality
+              Password Manager
             
           </span>
         </div>
@@ -296,10 +296,31 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../PasswordManager/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Password Manager
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -309,6 +330,80 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forgotpassword-handles-password-reset-functionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      ForgotPassword - Handles password reset functionality:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resendactivation-handles-resending-account-activation-emails" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResendActivation - Handles resending account activation emails:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invalidpasswordattempts-tracks-failed-login-attempts" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidPasswordAttempts - Tracks failed login attempts:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordhistory-manages-password-history-for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      PasswordHistory - Manages password history for security:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordpolicy-enforces-password-complexity-rules-inherits-from-passwordhistory" class="md-nav__link">
+    <span class="md-ellipsis">
+      PasswordPolicy - Enforces password complexity rules (inherits from PasswordHistory):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -674,31 +769,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Common Functionality
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../CommonFunctionality/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -708,35 +782,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#common-functionality" class="md-nav__link">
-    <span class="md-ellipsis">
-      Common Functionality
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1062,9 +1107,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#common-functionality" class="md-nav__link">
+  <a href="#forgotpassword-handles-password-reset-functionality" class="md-nav__link">
     <span class="md-ellipsis">
-      Common Functionality
+      ForgotPassword - Handles password reset functionality:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resendactivation-handles-resending-account-activation-emails" class="md-nav__link">
+    <span class="md-ellipsis">
+      ResendActivation - Handles resending account activation emails:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invalidpasswordattempts-tracks-failed-login-attempts" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidPasswordAttempts - Tracks failed login attempts:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordhistory-manages-password-history-for-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      PasswordHistory - Manages password history for security:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#passwordpolicy-enforces-password-complexity-rules-inherits-from-passwordhistory" class="md-nav__link">
+    <span class="md-ellipsis">
+      PasswordPolicy - Enforces password complexity rules (inherits from PasswordHistory):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Features:
     </span>
   </a>
   
@@ -1086,81 +1176,60 @@
 
 
 
-<h1 id="infrastructure">Infrastructure</h1>
-<h2 id="common-functionality">Common Functionality</h2>
-<p>Python, there are several functions and patterns that are commonly reused across different projects. Here are some commonly used functions and patterns:</p>
-<p>Generate OTP:</p>
-<pre><code>import random
-
-def generate_otp(length=6):
-    &quot;&quot;&quot;Generate a random OTP.&quot;&quot;&quot;
-    return ''.join(random.choice('0123456789') for _ in range(length))
-
-# Example usage:
-otp = generate_otp()
-print(f&quot;Generated OTP: {otp}&quot;)
-
-
-</code></pre>
-<p>Validate Date Format Based on Platform:</p>
-<pre><code>import datetime
-
-def validate_date_format(date_string, platform='unix'):
-    &quot;&quot;&quot;Validate date format based on the platform ('unix' or 'windows').&quot;&quot;&quot;
-    try:
-        if platform == 'unix':
-            datetime.datetime.strptime(date_string, '%Y-%m-%d')
-        elif platform == 'windows':
-            datetime.datetime.strptime(date_string, '%m/%d/%Y')
-        else:
-            raise ValueError(&quot;Invalid platform specified.&quot;)
-        return True
-    except ValueError:
-        return False
-
-# Example usage:
-date_unix = '2022-02-18'
-date_windows = '02/18/2022'
-
-print(validate_date_format(date_unix, platform='unix'))      # True
-print(validate_date_format(date_windows, platform='windows'))  # True
-print(validate_date_format('2022/02/18', platform='unix'))    # False
-
-</code></pre>
-<p>Convert Lengthy Decimal Value to 8 Decimal Places:</p>
-<pre><code>def convert_to_8_decimal(value):
-    &quot;&quot;&quot;Convert a lengthy decimal value to an 8-decimal value.&quot;&quot;&quot;
-    try:
-        return round(float(value), 8)
-    except ValueError:
-        return None
-
-# Example usage:
-lengthy_decimal = &quot;12345.6789012345678901234567890123456789&quot;
-converted_value = convert_to_8_decimal(lengthy_decimal)
-print(f&quot;Converted Value: {converted_value}&quot;)
-
-
-</code></pre>
-<p>Validate Not Future Date:</p>
-<pre><code>def validate_not_future_date(date_string, format='%Y-%m-%d'):
-    &quot;&quot;&quot;Validate that a date is not a future date.&quot;&quot;&quot;
-    try:
-        input_date = datetime.datetime.strptime(date_string, format)
-        today = datetime.datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
-        return input_date &lt;= today
-    except ValueError:
-        return False
-
-# Example usage:
-date_future = '2022-02-20'
-date_past = '2022-02-18'
-
-print(validate_not_future_date(date_future))  # False
-print(validate_not_future_date(date_past))    # True
-print(validate_not_future_date('invalid_date'))  # False
-
-</code></pre>
+<h1 id="password-manager">Password Manager</h1>
+<h2 id="forgotpassword-handles-password-reset-functionality">ForgotPassword - Handles password reset functionality:</h2>
+<ul>
+<li>Generates a reset link with encrypted email and expiration time</li>
+<li>Sends password reset email to user</li>
+<li>Updates user status to 'R' (reset mode)</li>
+</ul>
+<h2 id="resendactivation-handles-resending-account-activation-emails">ResendActivation - Handles resending account activation emails:</h2>
+<ul>
+<li>Similar to ForgotPassword but for account activation</li>
+<li>Checks user status before sending</li>
+<li>Uses different email template/link type ('set' vs 'reset')</li>
+</ul>
+<h2 id="invalidpasswordattempts-tracks-failed-login-attempts">InvalidPasswordAttempts - Tracks failed login attempts:</h2>
+<ul>
+<li>Checks organization's allowed attempts policy</li>
+<li>Locks account after too many failed attempts</li>
+<li>Increments attempt counter</li>
+</ul>
+<h2 id="passwordhistory-manages-password-history-for-security">PasswordHistory - Manages password history for security:</h2>
+<ul>
+<li>Stores previous passwords</li>
+<li>Marks old passwords as inactive</li>
+<li>Provides password history queries</li>
+</ul>
+<h2 id="passwordpolicy-enforces-password-complexity-rules-inherits-from-passwordhistory">PasswordPolicy - Enforces password complexity rules (inherits from PasswordHistory):</h2>
+<ul>
+<li>Checks minimum length, character requirements</li>
+<li>Validates against password history rules</li>
+<li>Enforces password expiration</li>
+</ul>
+<h2 id="key-features">Key Features:</h2>
+<ul>
+<li>Uses UUID for secure reset codes</li>
+<li>Email links are encrypted with expiration times (24 hours)</li>
+<li>Tracks password history to prevent reuse</li>
+<li>Enforces complex password policies (special chars, digits, etc.)</li>
+<li>Locks accounts after too many failed attempts</li>
+<li>Handles both password resets and account activations</li>
+<li>Uses SQLAlchemy for database operations</li>
+<li>Comprehensive error handling and logging</li>
+</ul>
+<p>Security Measures:
+- Password encryption (using Django's make_password/check_password)
+- Secure token generation
+- Time-limited reset links
+- Account lockout after failed attempts
+- Password complexity enforcement
+- Prevention of password reuse</p>
+<p>Integration Points:
+- Works with a User model/system (Users class)
+- Integrates with email system (sendForgotPasswordLinkToEmail)
+- Uses organization-specific policies
+- Ties into authentication system (AuthToken)</p>
 
 
 

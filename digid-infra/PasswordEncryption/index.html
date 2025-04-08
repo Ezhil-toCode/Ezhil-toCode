@@ -1100,6 +1100,7 @@ print(hasher.algorithm) # output  : pbkdf2_sha256
 
 </code></pre>
 <p>In the one-liner for creating a new password:</p>
+<p>If I change the Django SECRET_KEY, it will invalidate all existing JWT tokens. As a result, we'll need to clear the user list. Additionally, we should regenerate the hashed password using the following command:</p>
 <pre><code>python3 manage.py shell --command &quot;from django.contrib.auth.hashers import make_password, check_password; print(make_password('Welcome1@', hasher='pbkdf2_sha256'))&quot;
 </code></pre>
 <p>This will output the hashed password using the pbkdf2_sha256 algorithm. Remember that you should store this hashed password in your database for user authentication. When checking a password during login, you can use the check_password function:</p>

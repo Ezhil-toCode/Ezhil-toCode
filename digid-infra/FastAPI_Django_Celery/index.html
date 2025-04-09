@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../FastAPI_Django_Celery/">
+        <link rel="prev" href="../CeleryDjango/">
       
       
-        <link rel="next" href="../SMS/">
+        <link rel="next" href="../SSO/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>SSO - Digid Infrastructure</title>
+        <title>Celery Fastapi Django - Digid Infrastructure</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#integration-layer" class="md-skip">
+        <a href="#task-processing-evolution-threads-to-django-celery" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SSO
+              Celery Fastapi Django
             
           </span>
         </div>
@@ -589,28 +589,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../FastAPI_Django_Celery/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Celery Fastapi Django
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -628,7 +606,7 @@
   
   
   <span class="md-ellipsis">
-    SSO
+    Celery Fastapi Django
     
   </span>
   
@@ -641,7 +619,7 @@
   
   
   <span class="md-ellipsis">
-    SSO
+    Celery Fastapi Django
     
   </span>
   
@@ -664,9 +642,144 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sso-single-sign-on" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
-      SSO - Single sign-on
+      🧠 Background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problems-encountered" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Problems Encountered
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-of-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Introduction of Celery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Introduction of Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-of-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Pros of Celery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons-of-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Cons of Celery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-broker-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Handling Broker Failures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retry-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀 Retry Logic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-to-django-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Migration to Django + Celery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Migration to Django + Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Django?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Pros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 Cons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Conclusion
     </span>
   </a>
   
@@ -676,6 +789,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SSO/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSO
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1213,9 +1348,144 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#sso-single-sign-on" class="md-nav__link">
+  <a href="#background" class="md-nav__link">
     <span class="md-ellipsis">
-      SSO - Single sign-on
+      🧠 Background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧠 Background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problems-encountered" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❗ Problems Encountered
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-of-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔁 Introduction of Celery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔁 Introduction of Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔧 Architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros-of-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Pros of Celery
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons-of-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      ❌ Cons of Celery
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#handling-broker-failures" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Handling Broker Failures
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#retry-logic" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔀 Retry Logic
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#migration-to-django-celery" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Migration to Django + Celery
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Migration to Django + Celery">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-django" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Django?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pros" class="md-nav__link">
+    <span class="md-ellipsis">
+      🟢 Pros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cons" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔴 Cons
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Summary Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Conclusion
     </span>
   </a>
   
@@ -1237,44 +1507,125 @@
 
 
 
-<h1 id="integration-layer">Integration Layer</h1>
-<h2 id="sso-single-sign-on">SSO - Single sign-on</h2>
-<p>
-
-LDAP (Lightweight Directory Access Protocol) is a protocol for accessing and maintaining directory services. To interact with LDAP in Python, you can use the ldap3 library. Below is a basic example of connecting to an LDAP server, searching for a user, and retrieving some information.
-
-
-</p>
-
-<p><b>
-First, you need to install the ldap3 library:
-</b></p>
-<pre><code>pip install ldap3
+<h1 id="task-processing-evolution-threads-to-django-celery">Task Processing Evolution – Threads to Django + Celery</h1>
+<h2 id="background">🧠 Background</h2>
+<p>Initially, we began integrating a <strong>Machine Learning (ML) model</strong> into our FastAPI backend to process client requests asynchronously.</p>
+<p>To achieve this, we explored the following Python-native options:</p>
+<ul>
+<li><code>threading</code></li>
+<li><code>multiprocessing</code></li>
+<li><code>subprocess</code></li>
+</ul>
+<h3 id="problems-encountered">❗ Problems Encountered</h3>
+<p>While this worked for a small number of concurrent requests, the solution didn't scale:</p>
+<ul>
+<li><strong>High memory and CPU usage</strong> during load testing.</li>
+<li>Threads and processes stayed alive longer than expected.</li>
+<li>Difficult to manage and monitor.</li>
+<li>No retry mechanism.</li>
+<li>No visibility of failed or in-progress tasks.</li>
+</ul>
+<hr />
+<h2 id="introduction-of-celery">🔁 Introduction of Celery</h2>
+<p>To overcome the above problems, we adopted <strong>Celery</strong> with <strong>RabbitMQ</strong> (or Redis) as a broker.</p>
+<h3 id="architecture">🔧 Architecture</h3>
+<pre><code class="language-plaintext">Client → FastAPI ──→ DB
+                   │
+                   └──&gt; Try to queue task to Celery
+                         └─ Fail? → Keep in DB
+                         └─ Success? → Mark as 'queued'
 </code></pre>
-<p>
-Now, you can use the library to perform basic LDAP operations. Below is a simple example:
-</p>
-
-<pre><code>from ldap3 import Server, Connection, SUBTREE
-
-def authenticate_user(self,username, password):
-        try:
-            ldap_server = Server(self.ldap_server)
-            with Connection(ldap_server, user=self.username, password=self.password, auto_bind=True) as conn:
-                search_filter = f'(&amp;(sAMAccountName={username})(memberOf={self.search_dn}))'
-                conn.search(search_base=self.base_dn, search_filter=search_filter, search_scope=SUBTREE, attributes='*')
-                if conn.entries:
-                    distinguishedName=conn.entries[0].distinguishedName[0]
-                    rebind_status = conn.rebind(user=distinguishedName, password=password)
-                    if conn.bind():
-                        return True,'LDAP credentials were good!'  # Authentication successful
-                    else:
-                        return False,&quot;Invalid Credentials&quot;
-                return False,'User not found in the specific group or invalid credentials'
-        except Exception as e:
-            return False,'LDAP Authentication Error'
-
+<h3 id="pros-of-celery">✅ Pros of Celery</h3>
+<ul>
+<li>Offloads heavy processing from FastAPI.</li>
+<li>Scalable and distributed.</li>
+<li>Retry and failure tracking.</li>
+<li>Integrates well with monitoring tools like <strong>Flower</strong>.</li>
+<li>Works with RabbitMQ/Redis as broker, PostgreSQL for result backend.</li>
+</ul>
+<h3 id="cons-of-celery">❌ Cons of Celery</h3>
+<ul>
+<li>Additional components to maintain (worker, broker, beat).</li>
+<li>Requires setup for fault tolerance (retry logic, queues, monitoring).</li>
+<li>Debugging needs external tools/logs.</li>
+</ul>
+<hr />
+<h2 id="handling-broker-failures">🧩 Handling Broker Failures</h2>
+<p>We designed the logic as follows:</p>
+<pre><code class="language-python">try:
+    my_task.delay(data)
+except BrokerUnavailableError:
+    save_to_db_as_fallback(data)
 </code></pre>
+<p>If the Celery broker (RabbitMQ/Redis) is down, we fall back to storing the request in the DB for retry later.</p>
+<hr />
+<h2 id="retry-logic">🔀 Retry Logic</h2>
+<p>Later, a retry worker periodically checks DB for unprocessed tasks and retries pushing them to Celery every 10 minutes using:</p>
+<ul>
+<li>A simple cron/beat task</li>
+<li>OR Celery Beat (scheduler)</li>
+</ul>
+<hr />
+<h2 id="migration-to-django-celery">✅ Migration to Django + Celery</h2>
+<p>Eventually, we integrated <strong>Django + Celery</strong> for more robust capabilities and ease of admin.</p>
+<h3 id="why-django">Why Django?</h3>
+<ul>
+<li>Built-in ORM and admin interface.</li>
+<li>Easy to track tasks and statuses using <code>django-celery-results</code>.</li>
+<li>Easier to manage large-scale tasks and failures.</li>
+</ul>
+<h3 id="pros">🟢 Pros</h3>
+<ul>
+<li>Admin panel to reprocess/monitor tasks.</li>
+<li>Built-in tracking via <code>django-celery-results</code>.</li>
+<li>Easy to configure retries and alerts.</li>
+<li>DB-backed state for full audit logs.</li>
+</ul>
+<h3 id="cons">🔴 Cons</h3>
+<ul>
+<li>Heavier than plain FastAPI.</li>
+<li>More moving parts (Django ORM, models, migrations, etc.).</li>
+</ul>
+<hr />
+<h2 id="summary-table">📊 Summary Table</h2>
+<table>
+<thead>
+<tr>
+<th>Stage</th>
+<th>Tools Used</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial</td>
+<td>Threading, Subprocess</td>
+<td>Simple to implement</td>
+<td>No retry, memory leaks, unscalable</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>FastAPI + Celery</td>
+<td>Scalable, retry support, async processing</td>
+<td>Complex setup, broker downtime issues</td>
+</tr>
+<tr>
+<td>Final</td>
+<td>Django + Celery</td>
+<td>Admin panel, retry DB, task tracking</td>
+<td>Heavyweight, Django-specific setup</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conclusion">✅ Conclusion</h2>
+<ul>
+<li>For light async tasks: <code>FastAPI + BackgroundTasks</code> is fine.</li>
+<li>For scalable async processing: <code>Celery</code> is the way to go.</li>
+<li>For enterprise-level robustness: <code>Django + Celery</code> with result backend and admin tools is ideal.</li>
+</ul>
+<p>Let me know if you'd like this turned into a PDF or slide deck format!</p>
 
 
 
